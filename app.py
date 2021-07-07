@@ -53,31 +53,3 @@ def detect_intent_texts(project_id, session_id, text, language_code):
             session=session, query_input=query_input)
 
         return response.query_result.fulfillment_text
-
-
-# if __name__ == '__main__':
-#     app.run()
-    # channels = list_channels()
-    # if channels:
-    #     # print("Channels: ")
-    #     for channel in channels:
-    #         # print(channel['name'] + " (" + channel['id'] + ")")
-    #         # detailed_info = channel_info(channel['id'])
-    #         if channel['name'] == 'general':
-    #             detailed_info = channel_info(channel['id'])
-    #             # print('Latest text from ' + channel['name'] + ":")
-    #             # print(detailed_info['latest']['text'])
-    #             user_intent = detect_intent_texts('test-slackbot-bvhvpc', "unique", detailed_info['latest']['text'], 'en')
-    #             send_message(channel['id'], user_intent)
-    #
-    #             if detailed_info['latest']['text'] == 'exit':
-    #                 send_message(channel['id'], 'break')
-    #                 break
-    #                 # if user_intent == "dance" and channel['name'] == 'general':
-    #                 # if detailed_info['latest']['text'] == 'dance':
-    #                 #     send_message(channel['id'], "It worked!")
-    #                 # if detailed_info['latest']['text'] == 'ok':
-    #                 #     send_message(channel['id'], "no")
-    #
-    # else:
-    #     print("Unable to authenticate.")
